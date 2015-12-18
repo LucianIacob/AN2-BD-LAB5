@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="studenti" msprop:Generator_TableClassName="studentiDataTable" msprop:Generator_TableVarName="tablestudenti" msprop:Generator_RowChangedName="studentiRowChanged" msprop:Generator_TablePropName="studenti" msprop:Generator_RowDeletingName="studentiRowDeleting" msprop:Generator_RowChangingName="studentiRowChanging" msprop:Generator_RowEvHandlerName="studentiRowChangeEventHandler" msprop:Generator_RowDeletedName="studentiRowDeleted" msprop:Generator_RowClassName="studentiRow" msprop:Generator_UserTableName="studenti" msprop:Generator_RowEvArgName="studentiRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cods" msprop:Generator_ColumnVarNameInTable="columncods" msprop:Generator_ColumnPropNameInRow="cods" msprop:Generator_ColumnPropNameInTable="codsColumn" msprop:Generator_UserColumnName="cods" type="xs:short" />
+              <xs:element name="nrmatricol" msprop:Generator_ColumnVarNameInTable="columnnrmatricol" msprop:Generator_ColumnPropNameInRow="nrmatricol" msprop:Generator_ColumnPropNameInTable="nrmatricolColumn" msprop:Generator_UserColumnName="nrmatricol">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nume" msprop:Generator_ColumnVarNameInTable="columnnume" msprop:Generator_ColumnPropNameInRow="nume" msprop:Generator_ColumnPropNameInTable="numeColumn" msprop:Generator_UserColumnName="nume" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="grupa" msprop:Generator_ColumnVarNameInTable="columngrupa" msprop:Generator_ColumnPropNameInRow="grupa" msprop:Generator_ColumnPropNameInTable="grupaColumn" msprop:Generator_UserColumnName="grupa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datan" msprop:Generator_ColumnVarNameInTable="columndatan" msprop:Generator_ColumnPropNameInRow="datan" msprop:Generator_ColumnPropNameInTable="datanColumn" msprop:Generator_UserColumnName="datan" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sectii" msprop:Generator_TableClassName="sectiiDataTable" msprop:Generator_TableVarName="tablesectii" msprop:Generator_TablePropName="sectii" msprop:Generator_RowDeletingName="sectiiRowDeleting" msprop:Generator_RowChangingName="sectiiRowChanging" msprop:Generator_RowEvHandlerName="sectiiRowChangeEventHandler" msprop:Generator_RowDeletedName="sectiiRowDeleted" msprop:Generator_UserTableName="sectii" msprop:Generator_RowChangedName="sectiiRowChanged" msprop:Generator_RowEvArgName="sectiiRowChangeEvent" msprop:Generator_RowClassName="sectiiRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cods" msprop:Generator_ColumnVarNameInTable="columncods" msprop:Generator_ColumnPropNameInRow="cods" msprop:Generator_ColumnPropNameInTable="codsColumn" msprop:Generator_UserColumnName="cods" type="xs:short" />
+              <xs:element name="denumires" msprop:Generator_ColumnVarNameInTable="columndenumires" msprop:Generator_ColumnPropNameInRow="denumires" msprop:Generator_ColumnPropNameInTable="denumiresColumn" msprop:Generator_UserColumnName="denumires" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="70" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:studenti" />
+      <xs:field xpath="mstns:nrmatricol" />
+    </xs:unique>
+    <xs:unique name="sectii_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sectii" />
+      <xs:field xpath="mstns:cods" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
